@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crescenza | Cuidado Capilar Aruba</title>
+    <title>Crescenza Aruba | Tienda Oficial</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -11,107 +11,175 @@
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
         .text-coffee { color: #4B3621; }
         .bg-coffee { background-color: #4B3621; }
-        .product-card:hover { transform: translateY(-10px); transition: all 0.3s ease; }
+        #cart-modal { display: none; }
     </style>
 </head>
-<body class="bg-[#FDFBF9]">
+<body class="bg-[#FDFBF9] pb-20">
 
-    <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
-        <div class="text-2xl font-bold tracking-tighter text-coffee">CRESCENZA</div>
-        <a href="https://wa.me/2975614022" class="bg-[#25D366] text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md italic">Pedir por WhatsApp</a>
+    <nav class="p-4 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
+        <div class="text-xl font-bold tracking-tighter text-coffee uppercase">CRESCENZA</div>
+        <button onclick="toggleCart()" class="relative bg-coffee text-white p-2 px-6 rounded-full flex items-center space-x-2 shadow-lg">
+            <span>🛒</span>
+            <span id="cart-count" class="font-bold">0</span>
+            <span class="text-xs uppercase tracking-widest">Carrito</span>
+        </button>
     </nav>
 
-    <header class="relative h-[50vh] flex items-center justify-center text-center text-white bg-coffee">
-        <div class="relative z-10 px-4">
-            <h2 class="text-4xl md:text-6xl mb-4 italic">Cuidado Capilar Natural</h2>
-            <p class="text-lg mb-8 font-light max-w-xl mx-auto text-stone-200">Resultados visibles desde la raíz con el poder del café, canela y romero.</p>
-        </div>
+    <header class="bg-coffee text-white py-12 px-6 text-center">
+        <h2 class="text-4xl mb-2 italic text-stone-200">Natural Hair Care</h2>
+        <p class="font-light text-stone-400 italic">Hecho en Aruba con el poder del Café</p>
     </header>
 
-    <section id="productos" class="py-16 px-6 max-w-7xl mx-auto">
-        <h3 class="text-3xl text-center mb-12 text-coffee">Nuestros Productos</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section class="py-12 px-4 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-stone-100">
-                <img src="kit.jpg" alt="Kit Crescenza" class="w-full h-64 object-cover bg-stone-100">
-                <div class="p-6 text-center">
-                    <h4 class="text-xl font-bold mb-1">Kit Completo</h4>
-                    <p class="text-stone-500 mb-4 text-xs italic">La solución total</p>
-                    <div class="text-2xl font-bold text-[#A67B5B] mb-4">80 Fl.</div>
-                    <a href="https://wa.me/2975614022?text=Deseo%20el%20Kit%20Completo" class="inline-block w-full py-2 bg-coffee text-white rounded-lg font-medium">Lo quiero</a>
-                </div>
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100">
+                <img src="kit.jpg" alt="Kit" class="w-full h-48 object-cover rounded-xl bg-stone-100 mb-4">
+                <h4 class="text-lg font-bold">Kit Completo</h4>
+                <p class="text-2xl text-[#A67B5B] font-light my-2 font-serif">80 Fl.</p>
+                <button onclick="addToCart('Kit Completo', 80)" class="w-full bg-stone-100 text-coffee py-2 rounded-lg font-bold hover:bg-coffee hover:text-white transition uppercase text-xs">Agregar</button>
             </div>
 
-            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-stone-100">
-                <img src="shampoo.jpg" alt="Shampoo" class="w-full h-64 object-cover bg-stone-100">
-                <div class="p-6 text-center">
-                    <h4 class="text-xl font-bold mb-1 text-coffee">Shampoo</h4>
-                    <p class="text-stone-500 mb-4 text-xs italic">Café & Canela</p>
-                    <div class="text-2xl font-bold text-[#A67B5B] mb-4">30 Fl.</div>
-                    <a href="https://wa.me/2975614022?text=Deseo%20el%20Shampoo" class="inline-block w-full py-2 border-2 border-coffee text-coffee rounded-lg font-medium">Añadir</a>
-                </div>
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100">
+                <img src="shampoo.jpg" alt="Shampoo" class="w-full h-48 object-cover rounded-xl bg-stone-100 mb-4">
+                <h4 class="text-lg font-bold text-coffee">Shampoo</h4>
+                <p class="text-2xl text-[#A67B5B] font-light my-2 font-serif">30 Fl.</p>
+                <button onclick="addToCart('Shampoo', 30)" class="w-full bg-stone-100 text-coffee py-2 rounded-lg font-bold hover:bg-coffee hover:text-white transition uppercase text-xs">Agregar</button>
             </div>
 
-            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-stone-100">
-                <img src="tratamiento.jpg" alt="Tratamiento" class="w-full h-64 object-cover bg-stone-100">
-                <div class="p-6 text-center">
-                    <h4 class="text-xl font-bold mb-1 text-coffee">Tratamiento</h4>
-                    <p class="text-stone-500 mb-4 text-xs italic">Nutrición Profunda</p>
-                    <div class="text-2xl font-bold text-[#A67B5B] mb-4">35 Fl.</div>
-                    <a href="https://wa.me/2975614022?text=Deseo%20el%20Tratamiento" class="inline-block w-full py-2 border-2 border-coffee text-coffee rounded-lg font-medium">Añadir</a>
-                </div>
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100">
+                <img src="tratamiento.jpg" alt="Tratamiento" class="w-full h-48 object-cover rounded-xl bg-stone-100 mb-4">
+                <h4 class="text-lg font-bold text-coffee">Tratamiento</h4>
+                <p class="text-2xl text-[#A67B5B] font-light my-2 font-serif">35 Fl.</p>
+                <button onclick="addToCart('Tratamiento', 35)" class="w-full bg-stone-100 text-coffee py-2 rounded-lg font-bold hover:bg-coffee hover:text-white transition uppercase text-xs">Agregar</button>
             </div>
 
-            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-stone-100">
-                <img src="gotas.jpg" alt="Gotas" class="w-full h-64 object-cover bg-stone-100">
-                <div class="p-6 text-center">
-                    <h4 class="text-xl font-bold mb-1 text-coffee">Gotas</h4>
-                    <p class="text-stone-500 mb-4 text-xs italic">Crecimiento y Brillo</p>
-                    <div class="text-2xl font-bold text-[#A67B5B] mb-4">20 Fl.</div>
-                    <a href="https://wa.me/2975614022?text=Deseo%20las%20Gotas" class="inline-block w-full py-2 border-2 border-coffee text-coffee rounded-lg font-medium">Añadir</a>
-                </div>
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100">
+                <img src="gotas.jpg" alt="Gotas" class="w-full h-48 object-cover rounded-xl bg-stone-100 mb-4">
+                <h4 class="text-lg font-bold text-coffee">Gotas</h4>
+                <p class="text-2xl text-[#A67B5B] font-light my-2 font-serif">20 Fl.</p>
+                <button onclick="addToCart('Gotas', 20)" class="w-full bg-stone-100 text-coffee py-2 rounded-lg font-bold hover:bg-coffee hover:text-white transition uppercase text-xs">Agregar</button>
             </div>
 
         </div>
     </section>
 
-    <section class="bg-stone-100 py-16 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="text-3xl text-center mb-12 text-coffee italic">Cómo usar tu Kit Crescenza</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                
-                <div class="bg-white p-8 rounded-2xl shadow-sm">
-                    <div class="text-[#A67B5B] font-bold text-lg mb-2">PASO 1</div>
-                    <h5 class="font-bold text-coffee mb-3 underline">Shampoo Estimulante</h5>
-                    <p class="text-sm text-stone-600 leading-relaxed">Masajea el cuero cabelludo en círculos para activar la cafeína y la canela. <strong>Deja actuar por 5 minutos</strong> y enjuaga.</p>
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[100] p-4 flex items-center justify-center">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full relative shadow-2xl">
+            <button onclick="toggleCart()" class="absolute top-4 right-4 text-3xl text-stone-300 hover:text-coffee">&times;</button>
+            
+            <h3 class="text-2xl font-bold mb-6 text-coffee border-b pb-2">Finalizar Pedido</h3>
+            
+            <div class="mb-6">
+                <label class="block text-xs font-bold text-stone-500 uppercase tracking-widest mb-2">Nombre Completo:</label>
+                <input type="text" id="client-name" placeholder="Ej: Maria Perez" class="w-full p-3 border-2 border-stone-100 rounded-xl focus:border-coffee outline-none transition">
+            </div>
+
+            <div id="cart-items" class="space-y-4 mb-8 max-h-48 overflow-y-auto italic text-sm">
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-[#A67B5B]">
-                    <div class="text-[#A67B5B] font-bold text-lg mb-2">PASO 2</div>
-                    <h5 class="font-bold text-coffee mb-3 underline">Tratamiento Nutritivo</h5>
-                    <p class="text-sm text-stone-600 leading-relaxed">Aplica de raíz a puntas. Masajea suavemente para que los granitos de café estimulen la circulación. <strong>Deja actuar de 15 a 20 minutos.</strong></p>
+            <div class="border-t pt-6">
+                <div class="flex justify-between text-2xl font-bold text-coffee mb-8">
+                    <span>Total:</span>
+                    <span id="cart-total">0 Fl.</span>
                 </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm">
-                    <div class="text-[#A67B5B] font-bold text-lg mb-2">PASO 3</div>
-                    <h5 class="font-bold text-coffee mb-3 underline">Gotas Capilares</h5>
-                    <p class="text-sm text-stone-600 leading-relaxed">Agita bien y aplica en el cuero cabelludo. Masajea para fortalecer la raíz. <strong>No requiere enjuague.</strong> Úsalas de 3 a 4 veces por semana.</p>
-                </div>
-
+                <button onclick="sendToWhatsApp()" class="w-full bg-[#25D366] text-white py-4 rounded-xl font-bold shadow-xl flex justify-center items-center hover:bg-[#1eb954] transition">
+                    Enviar Pedido por WhatsApp 💬
+                </button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="py-12 bg-coffee text-white text-center">
-        <h4 class="text-2xl font-bold mb-2">¿Ventas al por mayor o Galón?</h4>
-        <p class="mb-6 font-light">Kit de 1 Galón (Shampoo + Tratamiento): <strong>195 Florines</strong></p>
-        <p class="text-xs uppercase tracking-widest text-stone-400">100% Vegano • Sin Sal • Sin Sulfatos • Aruba</p>
+    <section class="bg-stone-100 py-12 px-6">
+        <div class="max-w-4xl mx-auto text-center italic text-stone-500">
+            <p class="mb-2"><strong>Modo de Uso:</strong> Lavado 2-3 veces por semana.</p>
+            <p>Dejar actuar: Shampoo 5 min | Tratamiento 15-20 min.</p>
+        </div>
     </section>
 
     <footer class="py-12 text-center text-coffee">
         <p class="font-bold">📍 Aruba | 📞 5614022</p>
-        <p class="text-xs text-stone-400 mt-2">crescenza.aruba@gmail.com | @crescenzakit</p>
+        <p class="text-[10px] text-stone-400 mt-4 uppercase tracking-[0.2em]">Crescenza Aruba © 2026</p>
     </footer>
+
+    <script>
+        let cart = [];
+
+        function addToCart(name, price) {
+            cart.push({name, price});
+            updateCart();
+            alert("¡" + name + " agregado! Revisa tu carrito arriba.");
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cart-modal');
+            modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            const cartCount = document.getElementById('cart-count');
+            
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            if(cart.length === 0) {
+                cartItems.innerHTML = '<p class="text-stone-400 text-center">Tu carrito está vacío</p>';
+            }
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartItems.innerHTML += `
+                    <div class="flex justify-between items-center border-b pb-2 border-stone-50">
+                        <span class="text-coffee font-medium">${item.name}</span>
+                        <div class="flex items-center space-x-3">
+                            <span class="font-bold">${item.price} Fl.</span>
+                            <button onclick="removeItem(${index})" class="text-red-400 text-xs">Quitar</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            cartTotal.innerText = total + " Fl.";
+            cartCount.innerText = cart.length;
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function sendToWhatsApp() {
+            const name = document.getElementById('client-name').value;
+            
+            if (name.trim() === "") {
+                alert("Por favor, ingresa tu nombre para completar el pedido.");
+                return;
+            }
+
+            if (cart.length === 0) {
+                alert("Agrega productos al carrito primero.");
+                return;
+            }
+
+            let message = "🌿 PEDIDO CRESCENZA ARUBA 🌿\n\n";
+            message += 👤 *Cliente:* ${name}\n;
+            message += "--------------------------\n";
+            
+            let total = 0;
+            cart.forEach(item => {
+                message += • ${item.name}: ${item.price} Fl.\n;
+                total += item.price;
+            });
+
+            message += "--------------------------\n";
+            message += 💰 *TOTAL A PAGAR: ${total} Fl.*;
+            
+            const encodedMessage = encodeURIComponent(message);
+            window.location.href = https://wa.me/2975614022?text=${encodedMessage};
+        }
+    </script>
 
 </body>
 </html>
