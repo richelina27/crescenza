@@ -17,47 +17,46 @@
 <body class="bg-[#FDFBF9] pb-20">
 
     <nav class="p-4 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
-        <div class="text-xl font-bold tracking-tighter text-coffee uppercase">CRESCENZA</div>
-        <button onclick="toggleCart()" class="relative bg-coffee text-white p-2 px-6 rounded-full flex items-center space-x-2 shadow-lg">
+        <div class="text-xl font-bold tracking-tighter text-coffee uppercase italic">CRESCENZA</div>
+        <button onclick="toggleCart()" class="bg-coffee text-white p-2 px-6 rounded-full flex items-center space-x-2 shadow-lg transition transform active:scale-95">
             <span>🛒</span>
             <span id="cart-count" class="font-bold">0</span>
-            <span class="text-xs uppercase tracking-widest">Carrito</span>
         </button>
     </nav>
 
-    <header class="bg-coffee text-white py-12 px-6 text-center">
+    <header class="bg-coffee text-white py-10 px-6 text-center">
         <h2 class="text-4xl mb-2 italic text-stone-200">Natural Hair Care</h2>
-        <p class="font-light text-stone-400 italic">Hecho en Aruba con el poder del Café</p>
+        <p class="font-light text-stone-400 italic">Hecho en Aruba • 100% Vegano</p>
     </header>
 
     <section class="py-12 px-4 max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100">
-                <img src="kit.jpg" alt="Kit" class="w-full h-48 object-cover rounded-xl bg-stone-100 mb-4">
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100 text-center">
+                <img src="./Kit.jpg" alt="Kit Crescenza" class="w-full h-48 object-cover rounded-xl mb-4 bg-stone-50">
                 <h4 class="text-lg font-bold">Kit Completo</h4>
-                <p class="text-2xl text-[#A67B5B] font-light my-2 font-serif">80 Fl.</p>
+                <p class="text-2xl text-[#A67B5B] font-light my-2 italic">80 Fl.</p>
                 <button onclick="addToCart('Kit Completo', 80)" class="w-full bg-stone-100 text-coffee py-2 rounded-lg font-bold hover:bg-coffee hover:text-white transition uppercase text-xs">Agregar</button>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100">
-                <img src="shampoo.jpg" alt="Shampoo" class="w-full h-48 object-cover rounded-xl bg-stone-100 mb-4">
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100 text-center">
+                <img src="./Shampoo.jpg" alt="Shampoo" class="w-full h-48 object-cover rounded-xl mb-4 bg-stone-50">
                 <h4 class="text-lg font-bold text-coffee">Shampoo</h4>
-                <p class="text-2xl text-[#A67B5B] font-light my-2 font-serif">30 Fl.</p>
+                <p class="text-2xl text-[#A67B5B] font-light my-2 italic">30 Fl.</p>
                 <button onclick="addToCart('Shampoo', 30)" class="w-full bg-stone-100 text-coffee py-2 rounded-lg font-bold hover:bg-coffee hover:text-white transition uppercase text-xs">Agregar</button>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100">
-                <img src="tratamiento.jpg" alt="Tratamiento" class="w-full h-48 object-cover rounded-xl bg-stone-100 mb-4">
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100 text-center">
+                <img src="./Tratamiento.jpg" alt="Tratamiento" class="w-full h-48 object-cover rounded-xl mb-4 bg-stone-50">
                 <h4 class="text-lg font-bold text-coffee">Tratamiento</h4>
-                <p class="text-2xl text-[#A67B5B] font-light my-2 font-serif">35 Fl.</p>
+                <p class="text-2xl text-[#A67B5B] font-light my-2 italic">35 Fl.</p>
                 <button onclick="addToCart('Tratamiento', 35)" class="w-full bg-stone-100 text-coffee py-2 rounded-lg font-bold hover:bg-coffee hover:text-white transition uppercase text-xs">Agregar</button>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100">
-                <img src="gotas.jpg" alt="Gotas" class="w-full h-48 object-cover rounded-xl bg-stone-100 mb-4">
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden p-4 border border-stone-100 text-center">
+                <img src="./Gotero.jpg" alt="Gotas" class="w-full h-48 object-cover rounded-xl mb-4 bg-stone-50">
                 <h4 class="text-lg font-bold text-coffee">Gotas</h4>
-                <p class="text-2xl text-[#A67B5B] font-light my-2 font-serif">20 Fl.</p>
+                <p class="text-2xl text-[#A67B5B] font-light my-2 italic">20 Fl.</p>
                 <button onclick="addToCart('Gotas', 20)" class="w-full bg-stone-100 text-coffee py-2 rounded-lg font-bold hover:bg-coffee hover:text-white transition uppercase text-xs">Agregar</button>
             </div>
 
@@ -67,16 +66,14 @@
     <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[100] p-4 flex items-center justify-center">
         <div class="bg-white rounded-3xl p-8 max-w-md w-full relative shadow-2xl">
             <button onclick="toggleCart()" class="absolute top-4 right-4 text-3xl text-stone-300 hover:text-coffee">&times;</button>
+            <h3 class="text-2xl font-bold mb-6 text-coffee border-b pb-2 italic text-left">Tu Pedido</h3>
             
-            <h3 class="text-2xl font-bold mb-6 text-coffee border-b pb-2">Finalizar Pedido</h3>
-            
-            <div class="mb-6">
-                <label class="block text-xs font-bold text-stone-500 uppercase tracking-widest mb-2">Nombre Completo:</label>
-                <input type="text" id="client-name" placeholder="Ej: Maria Perez" class="w-full p-3 border-2 border-stone-100 rounded-xl focus:border-coffee outline-none transition">
+            <div class="mb-6 text-left">
+                <label class="block text-xs font-bold text-stone-500 uppercase mb-2 tracking-widest">Nombre Completo:</label>
+                <input type="text" id="client-name" placeholder="Escribe tu nombre" class="w-full p-3 border-2 border-stone-100 rounded-xl outline-none focus:border-coffee transition">
             </div>
 
-            <div id="cart-items" class="space-y-4 mb-8 max-h-48 overflow-y-auto italic text-sm">
-                </div>
+            <div id="cart-items" class="space-y-4 mb-8 max-h-48 overflow-y-auto italic text-sm text-left"></div>
 
             <div class="border-t pt-6">
                 <div class="flex justify-between text-2xl font-bold text-coffee mb-8">
@@ -84,22 +81,23 @@
                     <span id="cart-total">0 Fl.</span>
                 </div>
                 <button onclick="sendToWhatsApp()" class="w-full bg-[#25D366] text-white py-4 rounded-xl font-bold shadow-xl flex justify-center items-center hover:bg-[#1eb954] transition">
-                    Enviar Pedido por WhatsApp 💬
+                    Pedir por WhatsApp 💬
                 </button>
             </div>
         </div>
     </div>
 
     <section class="bg-stone-100 py-12 px-6">
-        <div class="max-w-4xl mx-auto text-center italic text-stone-500">
-            <p class="mb-2"><strong>Modo de Uso:</strong> Lavado 2-3 veces por semana.</p>
-            <p>Dejar actuar: Shampoo 5 min | Tratamiento 15-20 min.</p>
+        <div class="max-w-4xl mx-auto text-center italic text-stone-500 text-sm">
+            <p class="mb-2 font-bold text-coffee underline">Guía Rápida de Uso:</p>
+            <p><strong>Shampoo:</strong> Dejar actuar 5 min. | <strong>Tratamiento:</strong> Dejar 15-20 min.</p>
+            <p class="mt-2"><strong>Gotas:</strong> Aplicar en raíz 3-4 veces por semana (Sin enjuague).</p>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-coffee">
+    <footer class="py-10 text-center text-coffee">
         <p class="font-bold">📍 Aruba | 📞 5614022</p>
-        <p class="text-[10px] text-stone-400 mt-4 uppercase tracking-[0.2em]">Crescenza Aruba © 2026</p>
+        <p class="text-[10px] text-stone-400 mt-2 uppercase tracking-[0.2em]">Crescenza Aruba © 2026</p>
     </footer>
 
     <script>
@@ -108,7 +106,7 @@
         function addToCart(name, price) {
             cart.push({name, price});
             updateCart();
-            alert("¡" + name + " agregado! Revisa tu carrito arriba.");
+            alert("¡" + name + " agregado! ✨");
         }
 
         function toggleCart() {
@@ -120,27 +118,21 @@
             const cartItems = document.getElementById('cart-items');
             const cartTotal = document.getElementById('cart-total');
             const cartCount = document.getElementById('cart-count');
-            
-            cartItems.innerHTML = '';
             let total = 0;
-
+            cartItems.innerHTML = '';
+            
             if(cart.length === 0) {
-                cartItems.innerHTML = '<p class="text-stone-400 text-center">Tu carrito está vacío</p>';
+                cartItems.innerHTML = '<p class="text-stone-300">Carrito vacío</p>';
             }
 
             cart.forEach((item, index) => {
                 total += item.price;
                 cartItems.innerHTML += `
-                    <div class="flex justify-between items-center border-b pb-2 border-stone-50">
-                        <span class="text-coffee font-medium">${item.name}</span>
-                        <div class="flex items-center space-x-3">
-                            <span class="font-bold">${item.price} Fl.</span>
-                            <button onclick="removeItem(${index})" class="text-red-400 text-xs">Quitar</button>
-                        </div>
-                    </div>
-                `;
+                    <div class="flex justify-between border-b pb-2 border-stone-50">
+                        <span>${item.name}</span>
+                        <span class="font-bold">${item.price} Fl. <button onclick="removeItem(${index})" class="text-red-400 ml-2 font-normal text-xs uppercase">Quitar</button></span>
+                    </div>`;
             });
-
             cartTotal.innerText = total + " Fl.";
             cartCount.innerText = cart.length;
         }
@@ -152,34 +144,20 @@
 
         function sendToWhatsApp() {
             const name = document.getElementById('client-name').value;
+            if (!name.trim()) return alert("Por favor, ingresa tu nombre.");
+            if (cart.length === 0) return alert("Tu carrito está vacío.");
             
-            if (name.trim() === "") {
-                alert("Por favor, ingresa tu nombre para completar el pedido.");
-                return;
-            }
-
-            if (cart.length === 0) {
-                alert("Agrega productos al carrito primero.");
-                return;
-            }
-
-            let message = "🌿 PEDIDO CRESCENZA ARUBA 🌿\n\n";
-            message += 👤 *Cliente:* ${name}\n;
-            message += "--------------------------\n";
-            
+            let message = 🌿 *PEDIDO CRESCENZA ARUBA*\n👤 *Cliente:* ${name}\n;
+            message += --------------------------\n;
             let total = 0;
             cart.forEach(item => {
                 message += • ${item.name}: ${item.price} Fl.\n;
                 total += item.price;
             });
-
-            message += "--------------------------\n";
+            message += --------------------------\n;
             message += 💰 *TOTAL A PAGAR: ${total} Fl.*;
-            
-            const encodedMessage = encodeURIComponent(message);
-            window.location.href = https://wa.me/2975614022?text=${encodedMessage};
+            window.location.href = https://wa.me/2975614022?text=${encodeURIComponent(message)};
         }
     </script>
-
 </body>
 </html>
