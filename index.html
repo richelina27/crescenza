@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Poppins', sans-serif; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
         .text-coffee { color: #4B3621; }
         .bg-coffee { background-color: #4B3621; }
         .product-card:hover { transform: translateY(-10px); transition: all 0.3s ease; }
@@ -18,73 +18,99 @@
 
     <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
         <div class="text-2xl font-bold tracking-tighter text-coffee">CRESCENZA</div>
-        <a href="https://wa.me/2975614022" class="bg-[#25D366] text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md">Pedir por WhatsApp</a>
+        <a href="https://wa.me/2975614022" class="bg-[#25D366] text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md italic">Pedir por WhatsApp</a>
     </nav>
 
-    <header class="relative h-[60vh] flex items-center justify-center text-center text-white bg-coffee">
+    <header class="relative h-[50vh] flex items-center justify-center text-center text-white bg-coffee">
         <div class="relative z-10 px-4">
-            <h2 class="text-5xl md:text-6xl mb-4">Tu Kit de Cuidado Natural</h2>
-            <p class="text-xl mb-8 font-light">El poder del café, la canela y el romero en tu cabello.</p>
+            <h2 class="text-4xl md:text-6xl mb-4 italic">Cuidado Capilar Natural</h2>
+            <p class="text-lg mb-8 font-light max-w-xl mx-auto text-stone-200">Resultados visibles desde la raíz con el poder del café, canela y romero.</p>
         </div>
     </header>
 
-    <section id="productos" class="py-20 px-6 max-w-7xl mx-auto">
-        <h3 class="text-4xl text-center mb-16 text-coffee">Nuestra Colección</h3>
-        
+    <section id="productos" class="py-16 px-6 max-w-7xl mx-auto">
+        <h3 class="text-3xl text-center mb-12 text-coffee">Nuestros Productos</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
-            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl border border-stone-100">
-                <img src="kit.jpg" alt="Kit Crescenza" class="w-full h-64 object-cover bg-stone-200">
+            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-stone-100">
+                <img src="kit.jpg" alt="Kit Crescenza" class="w-full h-64 object-cover bg-stone-100">
                 <div class="p-6 text-center">
-                    <h4 class="text-xl font-bold mb-1">Kit Crescenza</h4>
-                    <p class="text-stone-500 mb-4 text-xs">Shampoo + Tratamiento + Gotas</p>
+                    <h4 class="text-xl font-bold mb-1">Kit Completo</h4>
+                    <p class="text-stone-500 mb-4 text-xs italic">La solución total</p>
                     <div class="text-2xl font-bold text-[#A67B5B] mb-4">80 Fl.</div>
-                    <a href="https://wa.me/2975614022?text=Hola!%20Deseo%20el%20Kit%20Completo" class="inline-block w-full py-2 bg-coffee text-white rounded-lg font-medium">Comprar</a>
+                    <a href="https://wa.me/2975614022?text=Deseo%20el%20Kit%20Completo" class="inline-block w-full py-2 bg-coffee text-white rounded-lg font-medium">Lo quiero</a>
                 </div>
             </div>
 
-            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl border border-stone-100">
-                <img src="shampoo.jpg" alt="Shampoo" class="w-full h-64 object-cover bg-stone-200">
+            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-stone-100">
+                <img src="shampoo.jpg" alt="Shampoo" class="w-full h-64 object-cover bg-stone-100">
                 <div class="p-6 text-center">
-                    <h4 class="text-xl font-bold mb-1">Shampoo</h4>
-                    <p class="text-stone-500 mb-4 text-xs">Café & Canela (500ml)</p>
+                    <h4 class="text-xl font-bold mb-1 text-coffee">Shampoo</h4>
+                    <p class="text-stone-500 mb-4 text-xs italic">Café & Canela</p>
                     <div class="text-2xl font-bold text-[#A67B5B] mb-4">30 Fl.</div>
-                    <a href="https://wa.me/2975614022?text=Hola!%20Deseo%20el%20Shampoo" class="inline-block w-full py-2 border-2 border-coffee text-coffee rounded-lg font-medium">Añadir</a>
+                    <a href="https://wa.me/2975614022?text=Deseo%20el%20Shampoo" class="inline-block w-full py-2 border-2 border-coffee text-coffee rounded-lg font-medium">Añadir</a>
                 </div>
             </div>
 
-            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl border border-stone-100">
-                <img src="tratamiento.jpg" alt="Tratamiento" class="w-full h-64 object-cover bg-stone-200">
+            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-stone-100">
+                <img src="tratamiento.jpg" alt="Tratamiento" class="w-full h-64 object-cover bg-stone-100">
                 <div class="p-6 text-center">
-                    <h4 class="text-xl font-bold mb-1">Tratamiento</h4>
-                    <p class="text-stone-500 mb-4 text-xs">Exfoliación y Nutrición</p>
+                    <h4 class="text-xl font-bold mb-1 text-coffee">Tratamiento</h4>
+                    <p class="text-stone-500 mb-4 text-xs italic">Nutrición Profunda</p>
                     <div class="text-2xl font-bold text-[#A67B5B] mb-4">35 Fl.</div>
-                    <a href="https://wa.me/2975614022?text=Hola!%20Deseo%20el%20Tratamiento" class="inline-block w-full py-2 border-2 border-coffee text-coffee rounded-lg font-medium">Añadir</a>
+                    <a href="https://wa.me/2975614022?text=Deseo%20el%20Tratamiento" class="inline-block w-full py-2 border-2 border-coffee text-coffee rounded-lg font-medium">Añadir</a>
                 </div>
             </div>
 
-            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl border border-stone-100">
-                <img src="gotas.jpg" alt="Gotas" class="w-full h-64 object-cover bg-stone-200">
+            <div class="product-card bg-white rounded-3xl overflow-hidden shadow-lg border border-stone-100">
+                <img src="gotas.jpg" alt="Gotas" class="w-full h-64 object-cover bg-stone-100">
                 <div class="p-6 text-center">
-                    <h4 class="text-xl font-bold mb-1">Gotas</h4>
-                    <p class="text-stone-500 mb-4 text-xs">Crecimiento y Brillo</p>
+                    <h4 class="text-xl font-bold mb-1 text-coffee">Gotas</h4>
+                    <p class="text-stone-500 mb-4 text-xs italic">Crecimiento y Brillo</p>
                     <div class="text-2xl font-bold text-[#A67B5B] mb-4">20 Fl.</div>
-                    <a href="https://wa.me/2975614022?text=Hola!%20Deseo%20las%20Gotas" class="inline-block w-full py-2 border-2 border-coffee text-coffee rounded-lg font-medium">Añadir</a>
+                    <a href="https://wa.me/2975614022?text=Deseo%20las%20Gotas" class="inline-block w-full py-2 border-2 border-coffee text-coffee rounded-lg font-medium">Añadir</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section class="py-10 bg-stone-100 text-center">
-        <h4 class="text-2xl font-bold text-coffee mb-2 text-center">¿Necesitas más cantidad?</h4>
-        <p class="mb-4">Kit de 1 Galón (Shampoo + Tratamiento): <strong>195 Florines</strong></p>
-        <a href="https://wa.me/2975614022" class="text-coffee font-bold border-b-2 border-coffee italic">Consultar disponibilidad</a>
+    <section class="bg-stone-100 py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-3xl text-center mb-12 text-coffee italic">Cómo usar tu Kit Crescenza</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="text-[#A67B5B] font-bold text-lg mb-2">PASO 1</div>
+                    <h5 class="font-bold text-coffee mb-3 underline">Shampoo Estimulante</h5>
+                    <p class="text-sm text-stone-600 leading-relaxed">Masajea el cuero cabelludo en círculos para activar la cafeína y la canela. <strong>Deja actuar por 5 minutos</strong> y enjuaga.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-[#A67B5B]">
+                    <div class="text-[#A67B5B] font-bold text-lg mb-2">PASO 2</div>
+                    <h5 class="font-bold text-coffee mb-3 underline">Tratamiento Nutritivo</h5>
+                    <p class="text-sm text-stone-600 leading-relaxed">Aplica de raíz a puntas. Masajea suavemente para que los granitos de café estimulen la circulación. <strong>Deja actuar de 15 a 20 minutos.</strong></p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="text-[#A67B5B] font-bold text-lg mb-2">PASO 3</div>
+                    <h5 class="font-bold text-coffee mb-3 underline">Gotas Capilares</h5>
+                    <p class="text-sm text-stone-600 leading-relaxed">Agita bien y aplica en el cuero cabelludo. Masajea para fortalecer la raíz. <strong>No requiere enjuague.</strong> Úsalas de 3 a 4 veces por semana.</p>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <footer class="py-16 text-center text-coffee">
-        <p>📍 Aruba | 📞 5614022</p>
-        <p class="text-xs mt-4">Crescenza Aruba © 2026</p>
+    <section class="py-12 bg-coffee text-white text-center">
+        <h4 class="text-2xl font-bold mb-2">¿Ventas al por mayor o Galón?</h4>
+        <p class="mb-6 font-light">Kit de 1 Galón (Shampoo + Tratamiento): <strong>195 Florines</strong></p>
+        <p class="text-xs uppercase tracking-widest text-stone-400">100% Vegano • Sin Sal • Sin Sulfatos • Aruba</p>
+    </section>
+
+    <footer class="py-12 text-center text-coffee">
+        <p class="font-bold">📍 Aruba | 📞 5614022</p>
+        <p class="text-xs text-stone-400 mt-2">crescenza.aruba@gmail.com | @crescenzakit</p>
     </footer>
 
 </body>
